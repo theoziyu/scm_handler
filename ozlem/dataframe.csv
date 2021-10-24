@@ -1,0 +1,4 @@
+camera_ip,camera_name,model_a,model_b
+1111.1111.1.1:5555,elif,True,True
+2222.2222.2.2:6666,sezai,True,False
+3333.3333.3.3:7777,fn,False,False
