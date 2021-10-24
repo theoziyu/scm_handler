@@ -15,7 +15,7 @@ class Registrant():
     def find_cam(self, cam_name):
         try:
             wanted_cam = self.database[self.database['camera_name'] == cam_name]
-            ip = wanted_cam["camera_ip"]
+            ip = wanted_cam["camera_nickname"]
             model_a = wanted_cam["model_a"]
             model_b = wanted_cam["model_b"]
             model_c = wanted_cam["model_c"]
@@ -28,7 +28,7 @@ class Registrant():
         for index in range(len(self.database)):
             cam_name = self.database.loc[index, "camera_name"]
             print("Initializing camera {}...".format(cam_name))
-            ip = self.database.loc[index, "camera_ip"]
+            ip = self.database.loc[index, "camera_nickname"]
             model_a = self.database.loc[index, "model_a"]
             model_b = self.database.loc[index, "model_b"]
             model_c = self.database.loc[index, "model_c"]

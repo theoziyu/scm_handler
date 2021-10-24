@@ -13,12 +13,12 @@ class DataframeWriter():
 
     def add_camera_name(self, cam_name):
         print("Adding a new camera named", cam_name)
-        ip = input("Enter the IP of camera (xxx.yyy.z.w:uuuu):")
+        nick = input("Enter the nickname of camera:")
         model_a = input("Run on Model A? (True or False):")
         model_b = input("Run on Model B? (True or False):")
         model_c = input("Run on Model C? (True or False):")
-        temp_df = pd.DataFrame([[cam_name, ip, model_a, model_b, model_c]],
-                        columns=["camera_name", "camera_ip",
+        temp_df = pd.DataFrame([[cam_name, nick, model_a, model_b, model_c]],
+                        columns=["camera_name", "camera_nickname",
                                  "model_a", "model_b", "model_c"])
         self.orig_df = self.orig_df.append(temp_df, ignore_index=True)
         self.update_csv()
@@ -35,28 +35,28 @@ class DataframeWriter():
     def get_camera_name(self, cam_name):
         print("Getting the info for camera {}...".format(cam_name))
         wanted_cam = self.orig_df[self.orig_df['camera_name'] == cam_name]
-        ip = wanted_cam["camera_ip"]
+        nick = wanted_cam["camera_nickname"]
         model_a = wanted_cam["model_a"]
         model_b = wanted_cam["model_b"]
         model_c = wanted_cam["model_c"]
 
-        return cam_name, ip, model_a, model_b, model_c
+        return cam_name, nick, model_a, model_b, model_c
 
     def update_camera_name(self, cam_name):
         print("Updating the info for camera {}...".format(cam_name))
         print("Press ENTER to keep the existing value.")
         indexes = self.orig_df[
             self.orig_df['camera_name'] == cam_name].index
-        name = input("Enter the new namefor the camera: ")
-        ip = input("Enter the IP of the camera (xxx.yyy.z.w:uuuu): ")
+        name = input("Enter the IP of the camera (xxx.yyy.z.w:uuuu): ")
+        nick = input("Enter the camera nickname: ")
         model_a = input("Run on Model A? (True or False): ")
         model_b = input("Run on Model B? (True or False): ")
         model_c = input("Run on Model C? (True or False): ")
         
         if name != "":
             self.orig_df.loc[indexes, "camera_name"] = name
-        if ip != "":
-            self.orig_df.loc[indexes, "camera_ip"] = ip
+        if nick != "":
+            self.orig_df.loc[indexes, "camera_nickname"] = nick
         if model_a != "":
             self.orig_df.loc[indexes, "model_a"] = model_a
         if model_b != "":

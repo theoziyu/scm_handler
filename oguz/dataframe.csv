@@ -1,6 +1,7 @@
-camera_name,camera_ip,model_a,model_b,model_c
-elif,111.111.1.1:5555,True,True,False
-sezai,333.333.3.3:7777,False,False,True
-oguz,444.444.4.4:8888,False,True,False
-fatmanur,555.555.5.5:9999,True,False,False
-ozlem,222.222.2.2:6666,True,True,True
+camera_name,camera_nickname,model_a,model_b,model_c
+333.333.3.3:7777,sezai,False,False,True
+444.444.4.4:8888,oguz,False,True,False
+555.555.5.5:9999,yusuf,False,False,False
+222.222.2.2:1111,OZLEM_AGLAMA,True,True,True
+111.111.1.1:5555,elif,True,True,True
+777.777.7.7:6666,YAB,False,False,False
