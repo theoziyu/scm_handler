@@ -1,0 +1,6 @@
+camera IP,camera name,model A,model B,model C
+192.168.1.102,camera 3,0,1,0
+192.168.1.103,camera 4,0,1,0
+192.168.1.103,camera 4,0,1,0
+192.168.1.102,camera 0,0,1,0
+192.168.1.102,camera 0,0,1,0
