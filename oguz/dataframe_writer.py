@@ -74,4 +74,4 @@ def test():
     which_cam = input("What camera to update?\n")
     writer_obj.update_camera_name(which_cam)
 
-test()
+# test()

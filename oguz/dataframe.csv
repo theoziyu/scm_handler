@@ -1,6 +1,6 @@
 camera_name,camera_ip,model_a,model_b,model_c
 elif,111.111.1.1:5555,True,True,False
-ozlem,222.222.2.2:6666,False,False,True
 sezai,333.333.3.3:7777,False,False,True
 oguz,444.444.4.4:8888,False,True,False
-bayat,555.555.5.5:9999,True,False,True
+fatmanur,555.555.5.5:9999,True,False,False
+ozlem,222.222.2.2:6666,True,True,True
